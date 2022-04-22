@@ -1600,7 +1600,8 @@ export function compiler(markdown, options) {
  */
 
 export default function Markdown({ children, options, ...props }) {
-  return React.cloneElement(compiler(children, options), props);
+  const compiled = compiler(children, options)
+  return compiled ? React.cloneElement(compiled, props) : null
 }
 
 if (process.env.NODE_ENV !== 'production') {
