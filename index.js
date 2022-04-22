@@ -1345,7 +1345,7 @@ export function compiler(markdown, options) {
               <tr>
                 {node.header.map(function generateHeaderCell(content, i) {
                   return (
-                    <th key={i} style={getTableStyle(node, i)}>
+                    <th key={i} className={'md'} style={getTableStyle(node, i)}>
                       {output(content, state)}
                     </th>
                   );
@@ -1359,7 +1359,7 @@ export function compiler(markdown, options) {
                   <tr key={i}>
                     {row.map(function generateTableCell(content, c) {
                       return (
-                        <td key={c} style={getTableStyle(node, c)}>
+                        <td key={c} className={'md'} style={getTableStyle(node, c)}>
                           {output(content, state)}
                         </td>
                       );
